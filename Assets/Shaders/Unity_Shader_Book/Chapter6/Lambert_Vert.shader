@@ -1,4 +1,5 @@
-// 逐像素光照
+// 逐顶点进行渲染
+// 对于细分程度比较低的模型，逐顶点光照会在背光面与向光面分界处出现锯齿
 Shader "Unity_Shader_Book/Chapter6/Lambert_Vert" {
     Properties {
         _Diffuse("Diffuse", color) = (1, 1, 1, 1)

@@ -1,5 +1,5 @@
 // 半兰伯特光照模型
-Shader "Unity_Shader_Book/Chapter6/HalfLambert"
+Shader "Unity_Shader_Book/Chapter6/Lambert_Half"
 {
     Properties {
         _Diffuse("Diffuse", color) = (0, 0 , 0, 0)

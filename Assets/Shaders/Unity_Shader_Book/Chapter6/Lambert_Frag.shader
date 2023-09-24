@@ -1,5 +1,4 @@
-// 逐像素光照
-// 对于细分程度比较低的模型，逐顶点光照会在背光面与向光面分界处出现锯齿
+// 逐像素进行渲染
 Shader "Unity_Shader_Book/Chapter6/Lambert_Frag" {
     Properties {
         _Diffuse("Diffuse", color) = (1, 1, 1, 1)
@@ -7,7 +6,7 @@ Shader "Unity_Shader_Book/Chapter6/Lambert_Frag" {
     SubShader {
         Pass {
             tags{ "LightMode" = "ForwardBase" } 
-        
+            
             CGPROGRAM
 
             #pragma vertex vert

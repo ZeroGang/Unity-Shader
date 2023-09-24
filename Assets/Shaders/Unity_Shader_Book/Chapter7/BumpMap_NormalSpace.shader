@@ -1,4 +1,5 @@
-Shader "Unity_Shader_Book/Chapter7/NomalMap"
+// 法线坐标下的法线贴图
+Shader "Unity_Shader_Book/Chapter7/BumpMap_NormalSpace"
 {
     Properties {
         _Color ("Color Tint", Color) = (1, 1, 1, 1)
@@ -61,7 +62,7 @@ Shader "Unity_Shader_Book/Chapter7/NomalMap"
                 // float3x3 rotation = float3x3(v,tangent.xyz, binormal, v.normal);  //TBN
                 // Or USE TANGENT_SPACE_ROTATION;
                 TANGENT_SPACE_ROTATION;
- 
+                
                 //viewDir和lightDir换到切线空间下
                 o.lightDir = mul(rotation, ObjSpaceLightDir(v.vertex)).xyz;
                 o.viewDir = mul(rotation, ObjSpaceViewDir(v.vertex)).xyz;
@@ -75,11 +76,11 @@ Shader "Unity_Shader_Book/Chapter7/NomalMap"
 
                 // 切线空间下的法线（法线纹理上的像素点转换成法线）
                 fixed3 tangentNormal = UnpackNormal(packNormal);
-                //加上bumpScale的影响
+                // 加上bumpScale的影响
                 tangentNormal.xy *= _BumpScale;
 
                 tangentNormal.z = sqrt(1.0 - saturate(dot(tangentNormal.xy, tangentNormal.xy)));
- 
+                
                 // 然后就开始正常的光照计算流程
                 // 贴图颜色
                 fixed3 albedo = tex2D(_MainTex, i.uv.xy).rgb * _Color,rgb;
@@ -88,8 +89,8 @@ Shader "Unity_Shader_Book/Chapter7/NomalMap"
                 fixed3 tangentlightDir = normalize(i.lightDir);
                 // 半程
                 fixed3 halfDir = normalize(tangentviewDir + tangentlightDir);
- 
- 
+                
+                
                 // 漫反射项
                 fixed halfLambert = dot(tangentNormal, tangentlightDir) * 0.5 + 0.5;
                 fixed Lambert = saturate(dot(tangentNormal, tangentlightDir));
@@ -102,7 +103,7 @@ Shader "Unity_Shader_Book/Chapter7/NomalMap"
 
                 // 混合
                 fixed3 resultColor = (diffuse + specular + ambient) * albedo;
- 
+                
                 return fixed4(resultColor, 1.0);
             }
             ENDCG
@@ -118,12 +119,12 @@ Shader "Unity_Shader_Book/Chapter7/NomalMap"
 
 // inline fixed3 UnpackNormal(fixed4 packednormal)
 // {
-// #if defined(SHADER_API_GLES)  defined(SHADER_API_MOBILE)
-//     return packednormal.xyz * 2 - 1;
-// #else
-//     fixed3 normal;
-//     normal.xy = packednormal.wy * 2 - 1;
-//     normal.z = sqrt(1 - normal.x*normal.x - normal.y * normal.y);
-//     return normal;
-// #endif
+    // #if defined(SHADER_API_GLES)  defined(SHADER_API_MOBILE)
+    //     return packednormal.xyz * 2 - 1;
+    // #else
+    //     fixed3 normal;
+    //     normal.xy = packednormal.wy * 2 - 1;
+    //     normal.z = sqrt(1 - normal.x*normal.x - normal.y * normal.y);
+    //     return normal;
+    // #endif
 // }

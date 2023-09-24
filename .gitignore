@@ -5,3 +5,5 @@
 [Oo]bj/
 [Uu]serSettings/
 *.sln
+.vs/
+.vscode/

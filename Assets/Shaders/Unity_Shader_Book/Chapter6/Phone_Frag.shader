@@ -1,4 +1,4 @@
-Shader "Unity_Shader_Book/Chapter6/Specular_Frag" {
+Shader "Unity_Shader_Book/Chapter6/Phone_Frag" {
     Properties{
         // 整体颜色
         _Diffuse("Diffuse",Color) = (1,1,1,1)
