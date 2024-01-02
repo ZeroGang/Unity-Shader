@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\Unity Project\Unity-Shader\Library\PackageCache\com.unity.ide.visualstudio@2.0.22\Editor\COMIntegration\COMIntegration~\COMIntegration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="F:\Unity Project\Unity-Shader\Library\PackageCache\com.unity.ide.visualstudio@2.0.22\Editor\COMIntegration\COMIntegration~\BStrHolder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="F:\Unity Project\Unity-Shader\Library\PackageCache\com.unity.ide.visualstudio@2.0.22\Editor\COMIntegration\COMIntegration~\ComPtr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\Unity Project\Unity-Shader\Library\PackageCache\com.unity.ide.visualstudio@2.0.22\Editor\COMIntegration\COMIntegration~\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="F:\Unity Project\Unity-Shader\Library\PackageCache\com.unity.ide.visualstudio@2.0.22\Editor\COMIntegration\COMIntegration~\dte80a.tlh" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1A093E3E-BB1B-3BFA-B41E-13450D22C22C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{42F4E080-22FD-3B51-B3EF-1101B8748AE8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

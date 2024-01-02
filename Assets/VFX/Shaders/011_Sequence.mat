@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 011_Sequence
+  m_Shader: {fileID: 4800000, guid: fc5cebba71fd6a44dac82d3f3e5a744d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 024d0828a42a4a84fa685156e3cca06a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Sequence:
+        m_Texture: {fileID: 2800000, guid: 9b10ae10bd9caf44ebe3cb112ffdeb31, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 2, y: 2}
+    m_Ints: []
+    m_Floats:
+    - _ColCount: 3
+    - _Opacity: 0.757
+    - _RowCount: 2
+    - _Speed: 5
+    m_Colors: []
+  m_BuildTextureStacks: []

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\Unity Project\Unity-Shader\build\CMakeFiles\8d092e05fd960d63937a074bdd2a1e91\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{704824B3-AE9C-3FC6-8848-B6F4C835E481}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
